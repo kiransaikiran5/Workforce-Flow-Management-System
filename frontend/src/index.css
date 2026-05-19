@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 15px;
+    @apply antialiased;
+  }
+
+  body {
+    @apply bg-white text-gray-900;
+  }
+
+  /* Dark mode styles */
+  html.dark body {
+    @apply bg-gray-800 text-gray-200;
+  }
+
+  /* Force native date/time inputs to use dark color scheme */
+  html.dark input[type="date"],
+  html.dark input[type="datetime-local"] {
+    color-scheme: dark;
+  }
+
+  /* Typography defaults */
+  h1 { @apply text-3xl font-bold tracking-tight; }
+  h2 { @apply text-2xl font-semibold; }
+  h3 { @apply text-xl font-semibold; }
+
+  /* Reusable page container */
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 md:px-6 py-8 space-y-8;
+  }
+}
+
+@layer utilities {
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.4s ease-out both;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-slideIn {
+  animation: slideIn 0.4s ease-out forwards;
+}

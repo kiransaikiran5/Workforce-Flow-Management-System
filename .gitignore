@@ -1,0 +1,41 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+*.egg
+.env
+venv/
+envsaikiran/
+.env.*
+
+# --- Node / React ---
+node_modules/
+build/
+.cache/
+*.log
+npm-debug.log*
+
+# --- Database ---
+*.sqlite3
+*.db
+pgdata/
+
+# --- IDE / Editor ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- ML model files (optional – remove if you want them tracked) ---
+# backend/app/ml/*.pkl   # <-- uncomment if your models are too large
+
+WA_Fn-UseC_-HR-Employee-Attrition.csv
+
+backend/static/documents/
